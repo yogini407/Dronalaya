@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
+    <!--  All snippets are MIT license http://bootdey.com/license -->
+    <title>User Profile</title>
+
+<!-- Vendor CSS Files -->
+<!-- <link type="text/css" href="{{url_for('static',filename='assets/vendor/aos/aos.css')}}" rel="stylesheet">-->
+  <link type="text/css" href="{{url_for('static',filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link type="text/css" href="{{url_for('static',filename='assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link type="text/css" href= "{{url_for('static',filename='assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link type="text/css" href="{{url_for('static',filename='assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link type="text/css" href="{{url_for('static',filename='assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+  <link type="text/css" href="{{url_for('static',filename='assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link type="text/css" href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<br>
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+  
+      <div class="logo">
+        <h1><a href="/">Dronalaya</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo5.JPG" alt="" class="img-fluid"></a> -->
+      </div>
+  
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/">About</a></li>
+          <li><a class="nav-link scrollto" href="/">Features</a></li>
+          <li><a class="nav-link scrollto " href="/">Trending Jobs</a></li>
+<!--           <li><a class="nav-link scrollto" href="#team">Team</a></li>-->
+<!--          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>-->
+          <!--<li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>-->
+          <li><a class="nav-link scrollto" href="/">Contact</a></li>
+           <li><a class="getstarted scrollto" href="/logout">Logout</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+  
+    </div>
+  </header><!-- End Header -->
+</br>
+</br>
+</br>
+</br>
+
+<div class="container bootstrap snippets bootdey">
+<div class="row ng-scope">
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-body text-center">
+                <div class="pv-lg"><img class="center-block img-responsive img-circle img-thumbnail thumb96" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Contact"></div>
+                <h3 class="m0 text-bold">{{name}}</h3>
+<!--                <h4 class="m0 text-bold">{{type}}</h4>-->
+                <div class="mv-lg">
+                    <p>Hello, I'm a software developer and looking for employees to contribute with our team.</p>
+                </div>
+<!--                <div class="text-center"><a class="btn btn-primary" href="">Edit Profile</a></div>-->
+            </div>
+        </div>
+<!--       Icons link
+https://bootdey.com/img/Content/avatar/avatar5.png-->
+
+<!--https://bootdey.com/img/Content/avatar/avatar5.png-->
+
+<!--https://bootdey.com/img/Content/avatar/avatar4.png-->
+
+<!--https://bootdey.com/img/Content/avatar/avatar3.png-->
+
+<!--https://bootdey.com/img/Content/avatar/avatar2.png-->
+        <div class="panel panel-default hidden-xs hidden-sm">
+            <div class="panel-heading">
+                <div class="panel-title text-center">Skills</div>
+            </div>
+            <div class="panel-body">
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <a href="https://www.hackerrank.com/"><img class="media-object img-circle img-thumbnail thumb48" src="data:image/png;base64,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" alt="Contact"></a>
+                    </div>
+                    <div class="media-body pt-sm">
+                        <div class="text-bold">Hackerrank
+                            <div class="text-sm text-muted">Coding</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <a href="https://www.codechef.com/"><img class="media-object img-circle img-thumbnail thumb48" src="data:image/jpeg;base64,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" alt="Contact"></a>
+                    </div>
+                    <div class="media-body pt-sm">
+                        <div class="text-bold">Codechef
+                            <div class="text-sm text-muted">Coding</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <a href="https://www.geeksforgeeks.org/"><img class="media-object img-circle img-thumbnail thumb48" src="data:image/jpeg;base64,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" alt="Contact"></a>
+                    </div>
+                    <div class="media-body pt-sm">
+                        <div class="text-bold">Geeks for Geeks
+                            <div class="text-sm text-muted">Coding</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <a href="https://www.hackerearth.com/"><img class="media-object img-circle img-thumbnail thumb48" src="data:image/png;base64,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" alt="Contact"></a>
+                    </div>
+                    <div class="media-body pt-sm">
+                        <div class="text-bold">HackerEarth
+                            <div class="text-sm text-muted">Coding</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <a href="https://www.freecodecamp.org/"><img class="media-object img-circle img-thumbnail thumb48" src="data:image/png;base64,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" alt="Contact"></a>
+                    </div>
+                    <div class="media-body pt-sm">
+                        <div class="text-bold">Free Code Camp
+                            <div class="text-sm text-muted">Coding</div>
+                        </div>
+                    </div>
+                </div>
+
+               <!-- <div class="text-center"><a class="btn btn-primary" href="light_contact_list.html">See More</a></div>-->
+            </div>
+        </div>
+    </div>
+     <div class="col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-body">
+<!--                <div class="pull-right">-->
+<!--                    <div class="btn-group dropdown" uib-dropdown="dropdown">-->
+<!--                        <button class="btn btn-link dropdown-toggle" uib-dropdown-toggle="disabled" aria-haspopup="true" aria-expanded="false"><em class="fa fa-ellipsis-v fa-lg text-muted"></em></button>-->
+<!--                        <ul class="dropdown-menu dropdown-menu-right animated fadeInLeft" role="menu">-->
+<!--                            <li><a href=""><span>Send by message</span></a></li>-->
+<!--                            <li><a href=""><span>Share contact</span></a></li>-->
+<!--                            <li><a href=""><span>Block contact</span></a></li>-->
+<!--                            <li><a href=""><span class="text-warning">Delete contact</span></a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <div class="h4 text-center">User Input Form</div>
+                <br>
+                <div class="row pv-lg">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <form action="/jobspage" class="form-horizontal ng-pristine ng-valid">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="inputContact1">Domain</label>
+                                <div class="col-sm-10">
+<!--                                    <input class="form-control" id="inputContact1" type="text" placeholder="" value="Audrey Hunt">-->
+
+                                   <select name="inputContact1" id="inputContact1">
+                                       <option value="none" selected disabled hidden>Select domain</option>
+                                       <option>Software Engineer</option>
+                                       <option>Android App Development</option>
+                                       <option>Web App Development</option>
+                                       <option>Front-end development</option>
+                                       <option>Back-end development</option>
+                                       <option>Full stack Development</option>
+                                       <option>Web designing</option>
+                                        <option>Data Science</option>
+                                       <option>Data Analytics</option>
+                                       <option>Big Data Analytics</option>
+                                       <option>Cloud Engineer</option>
+                                       <option>Testing</option>
+                                       <option>Database security</option>
+                                       <option>Networking</option>
+                                       <option>Artificial Intelligence</option>
+                                       <option>ML development</option>
+                                   </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="inputContact2">Salary</label>
+                                <div class="col-sm-10">
+<!--                                    <input class="form-control" id="inputContact2" type="email" value="mail@example.com">-->
+                                    <select name="inputContact2" id="inputContact2">
+                                            <option value="none" selected disabled hidden>Select salary</option>
+                                        <option>4LPA</option>
+                                        <option>5LPA</option>
+                                        <option>6LPA</option>
+                                        <option>7LPA</option>
+                                        <option>8LPA</option>
+                                        <option>10LPA</option>
+                                        <option>12LPA</option>
+                                        <option>13LPA</option>
+                                        <option>15LPA</option>
+                                        <option>17LPA</option>
+                                        <option>18LPA</option>
+                                   </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="inputContact3">Location</label>
+                                <div class="col-sm-10">
+                                   <!-- <input class="form-control" id="inputContact3" type="text" value="(123) 465 789">-->
+                                    <select name="inputContact3" id="inputContact3">
+                                        <option value="none" selected disabled hidden>Select location</option>
+                                        <option>Mumbai</option>
+                                        <option>Pune</option>
+                                        <option>Nashik</option>
+                                        <option>Delhi</option>
+                                        <option>Kolkata</option>
+                                        <option>Banglore</option>
+                                        <option>Hyderabad</option>
+                                        <option>Chennai</option>
+                                        <option>Indore</option>
+                                        <option>Ahemdabad</option>
+                                   </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="inputContact4">Job Type</label>
+                                <div class="col-sm-10">
+<!--                                    <input class="form-control" id="inputContact4" type="text" value="(12) 123 987 465">-->
+                                    <select name="inputContact4" id="inputContact4">
+                                        <option value="none" selected disabled hidden>Select job type</option>
+                                        <option>Full Time</option>
+                                        <option>Part Time</option>
+                                   </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="inputContact5">Recent Education</label>
+                                <div class="col-sm-10">
+<!--                                    <input class="form-control" id="inputContact4" type="text" value="(12) 123 987 465">-->
+                                    <select name="inputContact5" id="inputContact5">
+                                        <option value="none" selected disabled hidden>Select recent education</option>
+                                        <option>BE/ME</option>
+                                        <option>BTech/Mtech</option>
+                                        <option>BSC/MSC</option>
+                                        <option>BCA/MCA</option>
+                                        <option>BBA/MBA</option>
+                                   </select>
+                                </div>
+                            </div>
+
+
+                            <!--<div class="form-group">
+                                <label class="col-sm-2 control-label" for="inputContact6">Experience</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="inputContact4" type="text" value="(12) 123 987 465">
+                                    <select name="inputContact6" id="inputContact6">
+                                        <option value="none" selected disabled hidden>Select experience</option>
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                   </select>
+                                </div>
+                            </div>-->
+
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="inputContact7">Industry</label>
+                                <div class="col-sm-10">
+<!--                                    <input class="form-control" id="inputContact4" type="text" value="(12) 123 987 465">-->
+                                    <select name="inputContact7" id="inputContact7">
+                                        <option value="none" selected disabled hidden>Select industry</option>
+                                        <option>Product based</option>
+                                        <option>Service based</option>
+                                        <option>IT consulting</option>
+                                        <option>Software</option>
+                                        <option>Telecommunication</option>
+                                        <option>Financial Services</option>
+                                        <option>Robotics</option>
+                                        <option>Marketing</option>
+
+                                   </select>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="inputContact8">Skills</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="inputContact8" type="text" placeholder="Skills">
+                                </div>
+                            </div>
+
+                             <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Are you sure about the above information?</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="text-center"><button class="btn btn-primary" type="submit" href="/jobspage">Apply Jobs</button></div>
+<!--                                    <div class="text-center"><a class="btn btn-primary" href="/jobspage">Submit</a></div>-->
+<!--                                    <div class="text-center"><a class="btn btn-primary" href="/jobspage">Apply Jobs</a></div>-->
+                                     &nbsp;
+                                    <div class="text-center"><a class="btn btn-primary" href="/coursespage">Apply Courses</a></div>
+                                </div>
+                            </div>
+                            <!--<div class="form-group">
+                                <label class="col-sm-2 control-label" for="inputContact5">Website</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="inputContact5" type="text" value="http://some.wesbite.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="inputContact6">Address</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" id="inputContact6" row="4">Some nice Street, 1234</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="inputContact7">Social</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="inputContact7" type="text" value="@Social">
+                                </div>
+                            </div>-->
+
+                        </form>
+                        <!-- <div class="text-right"><a class="text-muted" href="#">Delete this contact?</a></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="text-center"><a class="btn btn-primary" href="/jobspage">Apply Jobs</a></div>-->
+<!--&nbsp;-->
+<!--<div class="text-center"><a class="btn btn-primary" href="">Apply Courses</a></div>-->
+<br>
+<br>
+<br>
+<br>
+</div>
+
+<style type="text/css">
+body{
+    margin-top:20px;
+    background:#f5f7fa;
+}
+.panel.panel-default {
+    border-top-width: 3px;
+}
+.panel {
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.14),0 2px 2px 0 rgba(0,0,0,.098),0 1px 5px 0 rgba(0,0,0,.084);
+    border: 0;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+.thumb96 {
+    width: 96px!important;
+    height: 96px!important;
+}
+.thumb48 {
+    width: 48px!important;
+    height: 48px!important;
+}
+</style>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>{% block title %} Dronalaya {% endblock %}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link type="text/css" href="{{url_for('static',filename='assets/img/LOGO.png')}}" rel="icon">
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+<!-- <link type="text/css" href="{{url_for('static',filename='assets/vendor/aos/aos.css')}}" rel="stylesheet">-->
+  <link type="text/css" href="{{url_for('static',filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link type="text/css" href="{{url_for('static',filename='assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link type="text/css" href= "{{url_for('static',filename='assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link type="text/css" href="{{url_for('static',filename='assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link type="text/css" href="{{url_for('static',filename='assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+  <link type="text/css" href="{{url_for('static',filename='assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link type="text/css" href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet" />
+
+</head>
+<body>
+<!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="templates/index.html">Dronalaya</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/LOGO.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" id="home" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Features</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Trending Jobs</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li> -->
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="/login">Login/Register</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+
+  <section action="/home" id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">Learn! Grow! Connect!</h1>
+          <h4 data-aos="fade-up" data-aos-delay="400">Find your job & make sure your goal!</h4>
+          <h2 data-aos="fade-up" data-aos-delay="400">Your dream job is waiting for you!</h2>
+          <div data-aos="fade-up" data-aos-delay="800">
+            <a href="/register" class="btn-get-started scrollto">Get Started</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
+          <img src="{{url_for('static',filename='assets/img/hero-img.png')}}" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+
+<main id="main">
+  <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>About Us</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+            <p>
+              Welcome to Dronalaya,We are here to make your work easy and save your time.
+              You can get (jobs ,courses,Profiles,colleges) recommendation at a one time on our platform.
+              Dronalaya will suggest you the same according to your interest.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Job Recommendation</li>
+              <li><i class="ri-check-double-line"></i> Courses Recommendation</li>
+              <li><i class="ri-check-double-line"></i> Profile Recommendation</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <p>
+              We are here for the upcoming youth and current generation to help them out in IT field.
+              Having this two sort of generation at one platform is really a great idea.
+            </p>
+            <!-- <a href="#" class="btn-learn-more">Learn More</a> -->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+   <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="row">
+          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
+            <img src="{{url_for('static',filename='assets/img/counts-img.svg')}}" alt="" class="img-fluid">
+          </div>
+
+          <div class="col-xl-7 d-flex align-items-stretch pt-4 pt-xl-0" data-aos="fade-left" data-aos-delay="300">
+            <div class="content d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-emoji-smile"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="4045" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>User Engagement</strong></p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-journal-richtext"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Top trending Courses & Jobs</strong> </p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-award"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="2025" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Successfully applied </strong> </p>
+                  </div>
+                </div>
+
+                <!-- <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-clock"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="1800" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Time saving</strong></p>
+                  </div>
+                </div> -->
+
+
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+  <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Features</h2>
+          <p>We are providing the following features</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bi bi-card-checklist"></i></div>
+              <h4 class="title"><a href="">Job Recommendation</a></h4>
+              <p class="description">Recommendation of jobs to user based on the Domain and Skills.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Courses Recommendation</a></h4>
+              <p class="description">Recommendation of Courses to user based on some factors like interest in particular area/domain.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bi bi-person-square"></i></div>
+              <h4 class="title"><a href="">Profile Recommendation</a></h4>
+              <p class="description">Recommendation of each others profile to user for ease of contact.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="bi bi-hand-thumbs-up-fill"></i></div>
+              <h4 class="title"><a href="">Parallel Platform</a></h4>
+              <p class="description">Providing one stop platform for upcoming youth(Learners) and current generation(Experts) to enhance their skillset.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+   <!-- ======= Trending Jobs ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Trending Jobs</h2>
+          <p>Find here best trending jobs in India!</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <!-- <li data-filter="*" class="filter-active">All Jobs</li> -->
+              <li data-filter=".filter-card">Web developer</li>
+              <li data-filter=".filter-web">UI Designer</li>
+              <li data-filter=".filter-app">Cloud Engineer</li>
+              <li data-filter=".filter-card">Data Scientist</li>
+              <li data-filter=".filter-web">System Analyst</li>
+              <li data-filter=".filter-app">Database Administrator</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename='assets/img/portfolio/PF1.png')}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 1</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename='assets/img/portfolio/PF1.png')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename='assets/img/portfolio/PF2.png')}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 2</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename='assets/img/portfolio/PF2.png')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename='assets/img/portfolio/PF3.png')}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename='assets/img/portfolio/PF3.png')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename='assets/img/portfolio/PF4.jpg')}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>UI 1</h4>
+                <p>UI</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename='assets/img/portfolio/PF4.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename='assets/img/portfolio/PF5.jpg')}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>UI 2</h4>
+                <p>UI</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename='assets/img/portfolio/PF5.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename='assets/img/portfolio/PF6.jpg')}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>UI 3</h4>
+                <p>UI</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename='assets/img/portfolio/PF6.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename='assets/img/portfolio/PF7.jpg')}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Cloud 1</h4>
+                <p>Cloud</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename='assets/img/portfolio/PF7.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename='assets/img/portfolio/PF8.jpg')}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Cloud 2</h4>
+                <p>Cloud</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename='assets/img/portfolio/PF8.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename='assets/img/portfolio/PF9.jpg')}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Cloud 3</h4>
+                <p>Cloud</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename='assets/img/portfolio/PF9.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Trending Jobs Section -->
+
+   <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Contact Us</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact-about">
+              <h3>Dronalaya</h3>
+              <p>We are here for the upcoming youth and current generation to help them out in IT field.
+                 Having this two sort of generation at one platform is really a great idea.
+
+                </p>
+              <div class="social-links">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="info">
+              <div>
+                <i class="ri-map-pin-line"></i>
+                <p>SSBT Jalgaon<br>Maharashtra, India</p>
+              </div>
+
+              <div>
+                <i class="ri-mail-send-line"></i>
+                <p>info@example.com</p>
+              </div>
+
+              <div>
+                <i class="ri-phone-line"></i>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>Dronalaya</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vesperr-free-bootstrap-template/ -->
+            <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#intro" class="scrollto">Home</a>
+            <a href="#about" class="scrollto">About</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+
+  <script src="{{url_for('static',filename='assets/vendor/purecounter/purecounter_vanilla.js')}}"></script>
+  <script src="{{url_for('static',filename='assets/vendor/aos/aos.js')}}"></script>
+  <script src="{{url_for('static',filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('static',filename='assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{url_for('static',filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{url_for('static',filename='assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{url_for('static',filename='assets/vendor/php-email-form/validate.js')}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{url_for('static',filename='assets/js/main.js')}}"></script>
+
+</body>
+</html>
